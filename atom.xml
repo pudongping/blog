@@ -6,7 +6,7 @@
   <link href="https://pudongping.github.io/atom.xml" rel="self"/>
   
   <link href="https://pudongping.github.io/"/>
-  <updated>2024-08-19T07:04:49.449Z</updated>
+  <updated>2024-11-16T08:37:11.923Z</updated>
   <id>https://pudongping.github.io/</id>
   
   <author>
@@ -17,11 +17,185 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Viper，一个Go语言配置管理神器！</title>
+    <link href="https://pudongping.github.io/posts/8026d3b4.html"/>
+    <id>https://pudongping.github.io/posts/8026d3b4.html</id>
+    <published>2024-11-16T08:36:36.000Z</published>
+    <updated>2024-11-16T08:37:11.923Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在现代软件开发中，良好的配置管理可以极大地提升应用的灵活性和可维护性。&lt;/p&gt;
+&lt;p&gt;在 Go 语言中，Viper 是一个功能强大且广泛使用的配置管理库，它支持从多个来源读取配置，包括文件、环境变量、远程配置中心等。本文将详细介绍如何使用 Viper</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="微服务" scheme="https://pudongping.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go Web服务中如何优雅平滑重启？</title>
+    <link href="https://pudongping.github.io/posts/cf5ac086.html"/>
+    <id>https://pudongping.github.io/posts/cf5ac086.html</id>
+    <published>2024-11-15T02:30:01.000Z</published>
+    <updated>2024-11-16T08:35:28.061Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在生产环境中，当我们需要对正在运行的服务进行升级时，如何确保不影响当前未处理完的请求，同时又能应用新的代码，是个极具挑战性的问题。&lt;/p&gt;
+&lt;p&gt;传统的做法通常是停止当前服务，部署新代码后再重启服务，但这种方式会导致正在处理的请求被强制中断，用户体验会受到很大的影响。&lt;/p</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go Web服务中如何优雅关机？</title>
+    <link href="https://pudongping.github.io/posts/2e2c4d21.html"/>
+    <id>https://pudongping.github.io/posts/2e2c4d21.html</id>
+    <published>2024-11-14T03:54:11.000Z</published>
+    <updated>2024-11-16T08:35:28.061Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在构建 Web 服务时，我们往往会遇到一个棘手的问题：&lt;strong&gt;当我们想要停止服务时，如何确保正在处理的请求能够顺利完成，而不是突然中断？&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用 Zap 轻松搞定 Go 语言中的结构化日志</title>
+    <link href="https://pudongping.github.io/posts/b16382e2.html"/>
+    <id>https://pudongping.github.io/posts/b16382e2.html</id>
+    <published>2024-11-13T09:29:13.000Z</published>
+    <updated>2024-11-16T08:35:28.062Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在开发现代应用程序时，日志记录是一个不可或缺的部分。它不仅能帮助我们跟踪程序的运行状态，还能在出现问题时提供宝贵的调试信息。&lt;/p&gt;
+&lt;p&gt;在 Go 语言中，有许多日志库可供选择，但在性能和灵活性方面，Zap 是其中的佼佼者。&lt;/p&gt;
+&lt;p&gt;今天，我将带你深入了解如何在</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+    <category term="Zap" scheme="https://pudongping.github.io/tags/Zap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis 实现高效任务队列：异步队列与延迟队列详解</title>
+    <link href="https://pudongping.github.io/posts/204a3169.html"/>
+    <id>https://pudongping.github.io/posts/204a3169.html</id>
+    <published>2024-11-12T03:58:39.000Z</published>
+    <updated>2024-11-16T08:35:28.062Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在现代开发中，任务队列是一种非常常见的设计模式。它允许我们将需要耗时的操作放到后台执行，从而提高系统的响应速度和并发能力。而在众多的技术选型中，Redis 凭借其高性能和简单易用性，成为了任务队列的理想选择。&lt;/p&gt;
+&lt;p&gt;本文将从零开始，带大家了解如何使用 Redis</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+    <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
+    
+    <category term="队列" scheme="https://pudongping.github.io/tags/%E9%98%9F%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何用Redis高效实现点赞功能？用Set？还是Bitmap？</title>
+    <link href="https://pudongping.github.io/posts/3adceb1d.html"/>
+    <id>https://pudongping.github.io/posts/3adceb1d.html</id>
+    <published>2024-11-12T02:51:06.000Z</published>
+    <updated>2024-11-16T08:35:28.062Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在众多软件应用中，&lt;strong&gt;点赞&lt;/strong&gt;功能几乎成了所有应用中的“标配”。但实现一个高效的点赞功能并不简单，尤其是在面对大规模的用户量和高并发场景时。&lt;/p&gt;
+&lt;p&gt;今天，我们就从实际需求出发，探索如何利用 Redis</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://pudongping.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
+    
+    <category term="Cache" scheme="https://pudongping.github.io/tags/Cache/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Go语言中高效使用Redis的Pipeline</title>
     <link href="https://pudongping.github.io/posts/9af95445.html"/>
     <id>https://pudongping.github.io/posts/9af95445.html</id>
     <published>2024-08-19T07:04:17.000Z</published>
-    <updated>2024-08-19T07:04:49.449Z</updated>
+    <updated>2024-08-19T07:04:59.363Z</updated>
     
     
       
@@ -423,176 +597,6 @@
         
     <summary type="html">&lt;p&gt;今天我们聊一个 Go 语言中的 “热门” 话题——为什么 &lt;strong&gt;Go 语言中的 map 默认不是并发安全&lt;/strong&gt;的呢？&lt;/p&gt;
 &lt;p&gt;对于广大 Go 程序员来说，尤其是那些刚跨入 Go</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言map并发安全，互斥锁和读写锁谁更优？</title>
-    <link href="https://pudongping.github.io/posts/35885ddd.html"/>
-    <id>https://pudongping.github.io/posts/35885ddd.html</id>
-    <published>2024-07-11T15:17:32.000Z</published>
-    <updated>2024-07-11T16:53:57.140Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;并发编程是 Go 语言的一大特色，合理地使用锁对于保证数据一致性和提高程序性能至关重要。&lt;/p&gt;
-&lt;p&gt;在处理并发控制时，&lt;code&gt;sync.Mutex&lt;/code&gt;（互斥锁）和</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="互斥锁" scheme="https://pudongping.github.io/tags/%E4%BA%92%E6%96%A5%E9%94%81/"/>
-    
-    <category term="锁" scheme="https://pudongping.github.io/tags/%E9%94%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言map并发安全使用的正确姿势</title>
-    <link href="https://pudongping.github.io/posts/85f0ac00.html"/>
-    <id>https://pudongping.github.io/posts/85f0ac00.html</id>
-    <published>2024-07-11T15:17:15.000Z</published>
-    <updated>2024-07-11T16:53:57.139Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在并发编程的世界里，&lt;code&gt;map&lt;/code&gt; 的使用随处可见。然而，当多个 goroutine 同时读写 map 时，如果不加以控制，很容易导致程序崩溃。&lt;/p&gt;
-&lt;p&gt;在 Go 语言中，我们通常有几种方法来保证对 map</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入理解 Nginx 与 Kong 的配置与实践</title>
-    <link href="https://pudongping.github.io/posts/52ffe35e.html"/>
-    <id>https://pudongping.github.io/posts/52ffe35e.html</id>
-    <published>2024-07-11T15:16:54.000Z</published>
-    <updated>2024-07-11T16:53:57.143Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在现代的微服务架构中，服务之间的通信和负载坐标成为了关键环节。这篇文章将深入探讨如何通过 Nginx 配置实现服务的负载均衡，同时如何利用 Kong API</summary>
-        
-      
-    
-    
-    
-    <category term="微服务" scheme="https://pudongping.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    
-    <category term="KONG" scheme="https://pudongping.github.io/tags/KONG/"/>
-    
-    <category term="微服务" scheme="https://pudongping.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    <category term="Nginx" scheme="https://pudongping.github.io/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker 安装 KONG 带你玩转 API 网关</title>
-    <link href="https://pudongping.github.io/posts/b8eafe4f.html"/>
-    <id>https://pudongping.github.io/posts/b8eafe4f.html</id>
-    <published>2024-07-11T15:16:39.000Z</published>
-    <updated>2024-07-11T16:53:57.138Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在当今的软件开发中，API 网关已成为微服务架构中不可或缺的一环。它不仅简化了服务间的通信、提供了统一的入口，还能在安全、监控、限流等方面发挥巨大作用。&lt;/p&gt;
-&lt;p&gt;今天，我们就来聊聊如何通过 Docker 快速部署 KONG —— 一个流行的开源 API</summary>
-        
-      
-    
-    
-    
-    <category term="微服务" scheme="https://pudongping.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    
-    <category term="Docker" scheme="https://pudongping.github.io/tags/Docker/"/>
-    
-    <category term="KONG" scheme="https://pudongping.github.io/tags/KONG/"/>
-    
-    <category term="微服务" scheme="https://pudongping.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Protobuf 实现高效数据交换</title>
-    <link href="https://pudongping.github.io/posts/7940debf.html"/>
-    <id>https://pudongping.github.io/posts/7940debf.html</id>
-    <published>2024-07-11T15:16:25.000Z</published>
-    <updated>2024-07-11T16:53:57.142Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在当今的软件开发领域，数据传输的效率和格式化方式尤为关键。Google 开发的 &lt;strong&gt;Protocol Buffers(Protobuf)&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="微服务" scheme="https://pudongping.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    
-    <category term="微服务" scheme="https://pudongping.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    <category term="Protobuf" scheme="https://pudongping.github.io/tags/Protobuf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言设计模式：使用Option模式简化类的初始化</title>
-    <link href="https://pudongping.github.io/posts/d24ea952.html"/>
-    <id>https://pudongping.github.io/posts/d24ea952.html</id>
-    <published>2024-07-09T14:56:04.000Z</published>
-    <updated>2024-07-09T15:11:36.548Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在面向对象编程中，当我们需要创建一个构造参数众多的类时，不仅使得代码难以阅读，而且在参数较多时，调用者需要记住每个参数的顺序和类型，这无疑增加了使用的复杂性，代码往往变得难以管理。&lt;/p&gt;
-&lt;p&gt;Go</summary>
         
       
     
