@@ -6,7 +6,7 @@
   <link href="https://pudongping.github.io/atom.xml" rel="self"/>
   
   <link href="https://pudongping.github.io/"/>
-  <updated>2024-11-16T08:37:11.923Z</updated>
+  <updated>2024-11-17T07:16:39.248Z</updated>
   <id>https://pudongping.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>分布式唯一ID生成：深入理解Snowflake算法在Go中的实现</title>
+    <link href="https://pudongping.github.io/posts/821f69.html"/>
+    <id>https://pudongping.github.io/posts/821f69.html</id>
+    <published>2024-11-17T07:15:59.000Z</published>
+    <updated>2024-11-17T07:16:39.248Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在分布式系统中，为了确保每个节点生成的 ID 在整个系统中是唯一的，我们需要一种高效且可靠的 ID 生成机制。&lt;/p&gt;
+&lt;h2 id=&quot;分布式-ID-的特点&quot;&gt;&lt;a href=&quot;#分布式-ID-的特点&quot; class=&quot;headerlink&quot; title=&quot;分布式 ID</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Viper，一个Go语言配置管理神器！</title>
     <link href="https://pudongping.github.io/posts/8026d3b4.html"/>
     <id>https://pudongping.github.io/posts/8026d3b4.html</id>
     <published>2024-11-16T08:36:36.000Z</published>
-    <updated>2024-11-16T08:37:11.923Z</updated>
+    <updated>2024-11-16T08:37:32.158Z</updated>
     
     
       
@@ -580,34 +608,6 @@
     <category term="Cache" scheme="https://pudongping.github.io/tags/Cache/"/>
     
     <category term="缓存" scheme="https://pudongping.github.io/tags/%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言中的map为什么默认不是并发安全的？</title>
-    <link href="https://pudongping.github.io/posts/3761f660.html"/>
-    <id>https://pudongping.github.io/posts/3761f660.html</id>
-    <published>2024-07-11T16:51:29.000Z</published>
-    <updated>2024-07-11T16:53:57.141Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天我们聊一个 Go 语言中的 “热门” 话题——为什么 &lt;strong&gt;Go 语言中的 map 默认不是并发安全&lt;/strong&gt;的呢？&lt;/p&gt;
-&lt;p&gt;对于广大 Go 程序员来说，尤其是那些刚跨入 Go</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
     
   </entry>
   
