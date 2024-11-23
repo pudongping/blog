@@ -6,7 +6,7 @@
   <link href="https://pudongping.github.io/atom.xml" rel="self"/>
   
   <link href="https://pudongping.github.io/"/>
-  <updated>2024-11-17T07:16:39.248Z</updated>
+  <updated>2024-11-23T04:20:10.691Z</updated>
   <id>https://pudongping.github.io/</id>
   
   <author>
@@ -17,11 +17,188 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>如何在 Go 项目中隐藏敏感信息，比如避免暴露用户密码？</title>
+    <link href="https://pudongping.github.io/posts/9d35cfe9.html"/>
+    <id>https://pudongping.github.io/posts/9d35cfe9.html</id>
+    <published>2024-11-23T04:19:35.000Z</published>
+    <updated>2024-11-23T04:20:10.691Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在我们日常开发的 Go 项目中，用户信息管理是一个非常常见的场景。特别是当我们需要存储和处理用户密码等敏感信息时，如何确保这些信息不暴露给客户端就显得尤为重要。&lt;/p&gt;
+&lt;p&gt;今天我们来讨论一个简单而实用的技巧——如何在返回用户数据时，隐藏密码字段。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>探索 Go 语言中的内存对齐：为什么结构体大小会有所不同？</title>
+    <link href="https://pudongping.github.io/posts/8f8634cd.html"/>
+    <id>https://pudongping.github.io/posts/8f8634cd.html</id>
+    <published>2024-11-22T03:00:10.000Z</published>
+    <updated>2024-11-23T04:16:56.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在 Go 语言中，内存对齐是一个经常被忽略但非常重要的概念。理解内存对齐不仅可以帮助我们写出更高效的代码，还能避免一些潜在的性能陷阱。&lt;/p&gt;
+&lt;p&gt;在这篇文章中，我们将通过一个简单的例子来探讨 Go</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>聊聊 Go 语言中的 JSON 序列化与 js 前端交互类型失真问题</title>
+    <link href="https://pudongping.github.io/posts/a370ff67.html"/>
+    <id>https://pudongping.github.io/posts/a370ff67.html</id>
+    <published>2024-11-21T02:40:21.000Z</published>
+    <updated>2024-11-23T04:16:56.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在 Web 开发中，后端与前端之间的数据交换通常通过 JSON 格式进行。&lt;/p&gt;
+&lt;p&gt;然而，在处理数字，尤其是大整数时，我们可能会遇到精度丢失的问题。这是因为 JavaScript 中的数字类型只能安全地处理一定范围内的整数。其数字类型是基于 64 位双精度浮点数的</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何在Go语言中实现表单验证？整一个validator吧！</title>
+    <link href="https://pudongping.github.io/posts/59486883.html"/>
+    <id>https://pudongping.github.io/posts/59486883.html</id>
+    <published>2024-11-20T03:19:49.000Z</published>
+    <updated>2024-11-23T04:16:56.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在现代 Web 开发中，表单验证和错误处理是至关重要的环节，尤其是在多语言环境下。&lt;/p&gt;
+&lt;p&gt;本文将通过一个实际的示例，演示如何使用 Go 语言的 Gin 框架结合 &lt;code&gt;validator&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用漏桶和令牌桶实现API速率限制</title>
+    <link href="https://pudongping.github.io/posts/ea016854.html"/>
+    <id>https://pudongping.github.io/posts/ea016854.html</id>
+    <published>2024-11-19T07:06:58.000Z</published>
+    <updated>2024-11-23T04:16:56.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在现代 Web 应用程序中，流量的突增是不可避免的。为防止服务器被过多的请求压垮，&lt;strong&gt;限流（Rate Limiting）&lt;/strong&gt; 是一个至关重要的技术手段。&lt;/p&gt;
+&lt;p&gt;本文将通过 Go 语言的 Gin</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+    <category term="漏桶" scheme="https://pudongping.github.io/tags/%E6%BC%8F%E6%A1%B6/"/>
+    
+    <category term="令牌桶" scheme="https://pudongping.github.io/tags/%E4%BB%A4%E7%89%8C%E6%A1%B6/"/>
+    
+    <category term="限流" scheme="https://pudongping.github.io/tags/%E9%99%90%E6%B5%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言中使用JWT鉴权、Token刷新完整示例，拿去直接用！</title>
+    <link href="https://pudongping.github.io/posts/9e517530.html"/>
+    <id>https://pudongping.github.io/posts/9e517530.html</id>
+    <published>2024-11-18T03:44:41.000Z</published>
+    <updated>2024-11-23T04:16:56.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在现代 Web 应用中，JWT（JSON Web Token）已经成为了主流的认证与授权解决方案。它轻量、高效、易于实现，并且非常适合于微服务架构。&lt;/p&gt;
+&lt;p&gt;在本文中，我们将通过 Go 语言及其流行的 Gin 框架，来深入探讨如何使用 JWT</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+    <category term="JWT" scheme="https://pudongping.github.io/tags/JWT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>分布式唯一ID生成：深入理解Snowflake算法在Go中的实现</title>
     <link href="https://pudongping.github.io/posts/821f69.html"/>
     <id>https://pudongping.github.io/posts/821f69.html</id>
     <published>2024-11-17T07:15:59.000Z</published>
-    <updated>2024-11-17T07:16:39.248Z</updated>
+    <updated>2024-11-17T07:16:45.690Z</updated>
     
     
       
@@ -428,186 +605,6 @@
     <category term="前端" scheme="https://pudongping.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="Chrome" scheme="https://pudongping.github.io/tags/Chrome/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言中如何连接 MySQL，基础必备！</title>
-    <link href="https://pudongping.github.io/posts/48b3e862.html"/>
-    <id>https://pudongping.github.io/posts/48b3e862.html</id>
-    <published>2024-08-08T17:10:47.000Z</published>
-    <updated>2024-08-08T17:11:34.804Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在现代应用中，数据库操作是必不可少的一部分，而 Go 语言凭借其高效性和并发处理能力，成为了越来越多开发者的选择。&lt;/p&gt;
-&lt;p&gt;在本教程中，我们将学习如何使用 Go 语言与 MySQL 数据库进行基本的 CRUD（创建、读取、更新、删除）操作。我们将使用</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一文弄懂Go语言的Context包，值得收藏！</title>
-    <link href="https://pudongping.github.io/posts/f5eba23a.html"/>
-    <id>https://pudongping.github.io/posts/f5eba23a.html</id>
-    <published>2024-08-02T08:44:26.000Z</published>
-    <updated>2024-08-02T08:45:20.149Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在开发高效且可维护的 Go 应用程序时，处理超时、取消操作和传递请求范围的数据变得至关重要。&lt;/p&gt;
-&lt;p&gt;这时，Go 标准库中的 &lt;code&gt;context&lt;/code&gt; 包就显得尤其重要了，它提供了在不同 API</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="Context" scheme="https://pudongping.github.io/tags/Context/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通过IMAP协议使用Go语言解析邮件</title>
-    <link href="https://pudongping.github.io/posts/60016311.html"/>
-    <id>https://pudongping.github.io/posts/60016311.html</id>
-    <published>2024-08-02T06:18:46.000Z</published>
-    <updated>2024-08-02T06:20:18.906Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;电子邮件在现代通信中依然扮演着重要的角色。为了提升邮件处理的效率，使用编程语言进行自动化处理变得尤为重要。&lt;/p&gt;
-&lt;p&gt;本文将详细介绍如何使用 Go 语言从 IMAP</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="IMAP" scheme="https://pudongping.github.io/tags/IMAP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何借助Redis巧妙的管理用户签到？——Bitmap篇</title>
-    <link href="https://pudongping.github.io/posts/fe86d4b2.html"/>
-    <id>https://pudongping.github.io/posts/fe86d4b2.html</id>
-    <published>2024-07-18T10:23:06.000Z</published>
-    <updated>2024-07-18T10:25:01.550Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;数据管理和分析是任何大小项目的重要组成部分。在管理如用户签到数据这类信息时，我们通常追求的是高效性和存储节省。&lt;/p&gt;
-&lt;p&gt;今天，让我们一起探索一种既节省空间又高效的数据管理方法——Redis 的位操作（Bit operations）。&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="Redis" scheme="https://pudongping.github.io/categories/Redis/"/>
-    
-    
-    <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
-    
-    <category term="Cache" scheme="https://pudongping.github.io/tags/Cache/"/>
-    
-    <category term="缓存" scheme="https://pudongping.github.io/tags/%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何借助Redis更高效统计UV？——Hyperloglog篇</title>
-    <link href="https://pudongping.github.io/posts/ceb09f0b.html"/>
-    <id>https://pudongping.github.io/posts/ceb09f0b.html</id>
-    <published>2024-07-18T10:22:51.000Z</published>
-    <updated>2024-07-18T10:25:01.552Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在今天的互联网时代，数据如潮水般汹涌而来。从用户行为数据、系统日志到实时交互数据，如何高效、准确地统计这海量数据中的唯一元素数量，成为了一个不小的挑战。&lt;/p&gt;
-&lt;p&gt;今天，我们要一起探索的是 Redis</summary>
-        
-      
-    
-    
-    
-    <category term="Redis" scheme="https://pudongping.github.io/categories/Redis/"/>
-    
-    
-    <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
-    
-    <category term="Cache" scheme="https://pudongping.github.io/tags/Cache/"/>
-    
-    <category term="缓存" scheme="https://pudongping.github.io/tags/%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何在Redis中快速推算两地之间的距离？——Geo篇</title>
-    <link href="https://pudongping.github.io/posts/9c96a9d2.html"/>
-    <id>https://pudongping.github.io/posts/9c96a9d2.html</id>
-    <published>2024-07-18T10:22:22.000Z</published>
-    <updated>2024-07-18T10:25:01.555Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;处理地理位置数据已成为许多应用程序的核心需求。无论是推送附近的餐馆还是对全国范围内的服务点进行分析，快速而准确地处理和检索地理位置信息都至关重要。Redis，作为一种高性能的内存数据库，为我们提供了这样的解决方案。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Redis 在</summary>
-        
-      
-    
-    
-    
-    <category term="Redis" scheme="https://pudongping.github.io/categories/Redis/"/>
-    
-    
-    <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
-    
-    <category term="Cache" scheme="https://pudongping.github.io/tags/Cache/"/>
-    
-    <category term="缓存" scheme="https://pudongping.github.io/tags/%E7%BC%93%E5%AD%98/"/>
     
   </entry>
   
