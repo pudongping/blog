@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Go语言中json序列化的一个小坑，建议多留意一下</title>
+      <link href="posts/5fc86d1c.html"/>
+      <url>posts/5fc86d1c.html</url>
+      
+        <content type="html"><![CDATA[<p>在 Go 语言开发中，JSON（JavaScript Object Notation）因其简洁和广泛的兼容性，通常被用作数据交换的主要序列化格式。然而，当你深入使用 JSON 时，<strong>可能会发现它并不总是最佳选择</strong>。</p><p>本文将探讨 JSON 序列化的一些局限性，也算是一个<em><strong>小坑</strong></em>吧。并给出一些常用的解决方案。</p><h2 id="JSON-序列化的潜在问题"><a href="#JSON-序列化的潜在问题" class="headerlink" title="JSON 序列化的潜在问题"></a>JSON 序列化的潜在问题</h2><p>我们先来看一个使用 JSON 进行序列化和反序列化的示例：</p><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> json_demo<span class="token keyword">import</span> <span class="token punctuation">(</span><span class="token string">"encoding/json"</span><span class="token string">"fmt"</span><span class="token punctuation">)</span><span class="token keyword">func</span> <span class="token function">JsonEnDeDemo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>d1 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>d2 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token keyword">var</span> <span class="token punctuation">(</span>age    <span class="token builtin">int</span>     <span class="token operator">=</span> <span class="token number">18</span>name   <span class="token builtin">string</span>  <span class="token operator">=</span> <span class="token string">"Alex"</span>height <span class="token builtin">float32</span> <span class="token operator">=</span> <span class="token number">1.75</span><span class="token punctuation">)</span>d1<span class="token punctuation">[</span><span class="token string">"name"</span><span class="token punctuation">]</span> <span class="token operator">=</span> named1<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span> <span class="token operator">=</span> aged1<span class="token punctuation">[</span><span class="token string">"height"</span><span class="token punctuation">]</span> <span class="token operator">=</span> heightret<span class="token punctuation">,</span> err <span class="token operator">:=</span> json<span class="token punctuation">.</span><span class="token function">Marshal</span><span class="token punctuation">(</span>d1<span class="token punctuation">)</span><span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"json.Marshal failed: %v\n"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token comment">// json.Marshal: {"age":18,"height":1.75,"name":"Alex"}</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"json.Marshal: %s\n"</span><span class="token punctuation">,</span> <span class="token function">string</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span><span class="token punctuation">)</span>err <span class="token operator">=</span> json<span class="token punctuation">.</span><span class="token function">Unmarshal</span><span class="token punctuation">(</span>ret<span class="token punctuation">,</span> <span class="token operator">&amp;</span>d2<span class="token punctuation">)</span><span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"json.Unmarshal failed: %v\n"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token comment">// json.Unmarshal: map[age:18 height:1.75 name:Alex]</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"json.Unmarshal: %v\n"</span><span class="token punctuation">,</span> d2<span class="token punctuation">)</span><span class="token comment">// 这里我们可以发现一个问题：Go 语言中的 json 包在序列化 interface{} 类型时，会将数字类型（整型、浮点型等）都序列化为 float64 类型</span><span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token operator">:=</span> <span class="token keyword">range</span> d2 <span class="token punctuation">{</span><span class="token comment">// key: age, value: 18, type:float64</span><span class="token comment">// key: height, value: 1.75, type:float64</span><span class="token comment">// key: name, value: Alex, type:string</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"key: %s, value: %v, type:%T \n"</span><span class="token punctuation">,</span> k<span class="token punctuation">,</span> v<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这段代码展示了如何将一个包含 <code>name</code>、<code>age</code> 和 <code>height</code> 的 Go map 数据结构序列化为 JSON 字符串，然后再反序列化回来。看似一切正常，但请注意反序列化后的数据类型变化。</p><p>运行代码后的输出可能会让你感到意外：</p><pre class="line-numbers language-none"><code class="language-none">json.Marshal: {"age":18,"height":1.75,"name":"Alex"}json.Unmarshal: map[age:18 height:1.75 name:Alex]key: age, value: 18, type:float64 key: height, value: 1.75, type:float64 key: name, value: Alex, type:string <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>问题</strong>：我们发现，尽管原始数据中 <code>age</code> 是 <code>int</code> 类型，<code>height</code> 是 <code>float32</code> 类型，但经过 JSON 反序列化后，它们全都变成了 <code>float64</code> 类型。</p><p>Go 语言中的 <code>encoding/json</code> 包会将所有数字类型（包括整型、浮点型等）<strong>都</strong>转换为 <code>float64</code> ，那么，有没有方式可以不让类型丢失呢？还真有！</p><h2 id="gob-二进制协议，高效且保留类型的-Go-专用序列化"><a href="#gob-二进制协议，高效且保留类型的-Go-专用序列化" class="headerlink" title="gob 二进制协议，高效且保留类型的 Go 专用序列化"></a>gob 二进制协议，高效且保留类型的 Go 专用序列化</h2><p>为了避免 JSON 的这一局限性，我们可以使用 Go 语言特有的 GOB 序列化方式。GOB 不仅可以高效地序列化数据，还能够保留原始数据类型。</p><p>以下是使用 GOB 进行序列化和反序列化的示例：</p><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> json_demo<span class="token keyword">import</span> <span class="token punctuation">(</span><span class="token string">"bytes"</span><span class="token string">"encoding/gob"</span><span class="token string">"fmt"</span><span class="token punctuation">)</span><span class="token keyword">func</span> <span class="token function">GobEnDeDemo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>d1 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>d2 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token keyword">var</span> <span class="token punctuation">(</span>age    <span class="token builtin">int</span>     <span class="token operator">=</span> <span class="token number">18</span>name   <span class="token builtin">string</span>  <span class="token operator">=</span> <span class="token string">"Alex"</span>height <span class="token builtin">float32</span> <span class="token operator">=</span> <span class="token number">1.75</span><span class="token punctuation">)</span>d1<span class="token punctuation">[</span><span class="token string">"name"</span><span class="token punctuation">]</span> <span class="token operator">=</span> named1<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span> <span class="token operator">=</span> aged1<span class="token punctuation">[</span><span class="token string">"height"</span><span class="token punctuation">]</span> <span class="token operator">=</span> height<span class="token comment">// encode</span>buf <span class="token operator">:=</span> <span class="token function">new</span><span class="token punctuation">(</span>bytes<span class="token punctuation">.</span>Buffer<span class="token punctuation">)</span>enc <span class="token operator">:=</span> gob<span class="token punctuation">.</span><span class="token function">NewEncoder</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span>err <span class="token operator">:=</span> enc<span class="token punctuation">.</span><span class="token function">Encode</span><span class="token punctuation">(</span>d1<span class="token punctuation">)</span><span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"gob.Encode failed: %v\n"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">}</span>b <span class="token operator">:=</span> buf<span class="token punctuation">.</span><span class="token function">Bytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">// gob.Encode:  [13 127 4 1 2 255 128 0 1 12 1 16 0 0 57 255 128 0 3 4 110 97 109 101 6 115 116 114 105 110 103 12 6 0 4 65 108 101 120 3 97 103 101 3 105 110 116 4 2 0 36 6 104 101 105 103 104 116 7 102 108 111 97 116 51 50 8 4 0 254 252 63]</span>fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"gob.Encode: "</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token comment">// decode</span>dec <span class="token operator">:=</span> gob<span class="token punctuation">.</span><span class="token function">NewDecoder</span><span class="token punctuation">(</span>bytes<span class="token punctuation">.</span><span class="token function">NewBuffer</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span>err <span class="token operator">=</span> dec<span class="token punctuation">.</span><span class="token function">Decode</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>d2<span class="token punctuation">)</span><span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"gob.Decode failed: %v\n"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token comment">// gob.Decode: map[age:18 height:1.75 name:Alex]</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"gob.Decode: %v\n"</span><span class="token punctuation">,</span> d2<span class="token punctuation">)</span><span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token operator">:=</span> <span class="token keyword">range</span> d2 <span class="token punctuation">{</span><span class="token comment">// key: name, value: Alex, type:string</span><span class="token comment">// key: age, value: 18, type:int</span><span class="token comment">// key: height, value: 1.75, type:float32</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"key: %s, value: %v, type:%T \n"</span><span class="token punctuation">,</span> k<span class="token punctuation">,</span> v<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>从上面的代码中可以看到，GOB 序列化不仅保留了 <code>age</code> 的 <code>int</code> 类型和 <code>height</code> 的 <code>float32</code> 类型，还能高效地进行数据编码。这使得 GOB 成为在 Go 程序内部传递数据的理想选择。</p><h2 id="第三方包-msgpack"><a href="#第三方包-msgpack" class="headerlink" title="第三方包 msgpack"></a>第三方包 msgpack</h2><p><code>msgpack</code> 是一种高效的二进制序列化格式，它允许你在多种语言(如JSON)之间交换数据。但它更快更小。</p><p>首先需要先下载这个包</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">go get <span class="token parameter variable">-v</span> github.com/vmihailenco/msgpack/v5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>来看一个使用 msgpack 的示例：</p><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> json_demo<span class="token keyword">import</span> <span class="token punctuation">(</span><span class="token string">"fmt"</span><span class="token string">"github.com/vmihailenco/msgpack/v5"</span><span class="token punctuation">)</span><span class="token keyword">func</span> <span class="token function">MsgpackEnDeDemo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">// msgpack 序列化示例</span>d1 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>d2 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token keyword">var</span> <span class="token punctuation">(</span>age    <span class="token builtin">int</span>     <span class="token operator">=</span> <span class="token number">18</span>name   <span class="token builtin">string</span>  <span class="token operator">=</span> <span class="token string">"Alex"</span>height <span class="token builtin">float32</span> <span class="token operator">=</span> <span class="token number">1.75</span><span class="token punctuation">)</span>d1<span class="token punctuation">[</span><span class="token string">"name"</span><span class="token punctuation">]</span> <span class="token operator">=</span> named1<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span> <span class="token operator">=</span> aged1<span class="token punctuation">[</span><span class="token string">"height"</span><span class="token punctuation">]</span> <span class="token operator">=</span> height<span class="token comment">// encode</span>b<span class="token punctuation">,</span> err <span class="token operator">:=</span> msgpack<span class="token punctuation">.</span><span class="token function">Marshal</span><span class="token punctuation">(</span>d1<span class="token punctuation">)</span><span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"msgpack.Marshal failed: %v\n"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token comment">// msgpack.Marshal:  [131 164 110 97 109 101 164 65 108 101 120 163 97 103 101 18 166 104 101 105 103 104 116 202 63 224 0 0]</span>fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"msgpack.Marshal: "</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token comment">// decode</span>err <span class="token operator">=</span> msgpack<span class="token punctuation">.</span><span class="token function">Unmarshal</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> <span class="token operator">&amp;</span>d2<span class="token punctuation">)</span><span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"msgpack.Unmarshal failed: %v\n"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">}</span><span class="token comment">// msgpack.Unmarshal: map[age:18 height:1.75 name:Alex]</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"msgpack.Unmarshal: %v\n"</span><span class="token punctuation">,</span> d2<span class="token punctuation">)</span><span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token operator">:=</span> <span class="token keyword">range</span> d2 <span class="token punctuation">{</span><span class="token comment">// key: age, value: 18, type:int8</span><span class="token comment">// key: height, value: 1.75, type:float32</span><span class="token comment">// key: name, value: Alex, type:string</span>fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"key: %s, value: %v, type:%T \n"</span><span class="token punctuation">,</span> k<span class="token punctuation">,</span> v<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>msgpack的优势</strong>：</p><ul><li><strong>高效紧凑</strong>：数据体积比 JSON 更小，序列化和反序列化速度更快。</li><li><strong>类型保持</strong>：与 GOB 类似，msgpack 也能保持原始数据类型。</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li><strong>json</strong>：虽然广泛使用且易于阅读，但在处理数字类型时有潜在的精度问题。</li><li><strong>gob</strong>：适用于 Go 语言程序内部的数据传输，保留类型且性能优异，但仅适用于 Go。</li><li><strong>msgpack</strong>：在需要高效、紧凑的跨语言数据交换时非常有用，同时还能保留数据类型。</li></ul><p>通过这三种序列化方式的比较，希望你能够根据实际需求选择合适的工具。在需要保证类型和性能的 Go 程序中，gob 和 msgpack 可能是比 json 更好的选择，不过，你也完全可以使用 json 包来反序列化，只不过取值的时候就需要通过类型断言来得到之前的类型。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Go </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Go </tag>
+            
+            <tag> Golang </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何在 Go 项目中隐藏敏感信息，比如避免暴露用户密码？</title>
       <link href="posts/9d35cfe9.html"/>
       <url>posts/9d35cfe9.html</url>
@@ -2127,9 +2154,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> Docker </tag>
             
@@ -2156,9 +2183,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> Docker </tag>
             
@@ -2185,9 +2212,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> Docker </tag>
             
@@ -2214,9 +2241,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> Docker </tag>
             
@@ -2370,9 +2397,9 @@
       
         <tags>
             
-            <tag> Docker </tag>
-            
             <tag> Git </tag>
+            
+            <tag> Docker </tag>
             
         </tags>
       
@@ -4629,9 +4656,9 @@
             
             <tag> Docker </tag>
             
-            <tag> Laradock </tag>
-            
             <tag> Laravel </tag>
+            
+            <tag> Laradock </tag>
             
         </tags>
       
@@ -4656,9 +4683,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> Docker </tag>
             
@@ -4687,9 +4714,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> Docker </tag>
             
@@ -4716,9 +4743,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> Docker </tag>
             
@@ -4745,9 +4772,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> Docker </tag>
             
@@ -4965,9 +4992,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
         </tags>
       
@@ -5204,9 +5231,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> 免费 HTTPS 证书 </tag>
             
@@ -5233,9 +5260,9 @@
       
         <tags>
             
-            <tag> CentOS </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> CentOS </tag>
             
             <tag> 免费 HTTPS 证书 </tag>
             

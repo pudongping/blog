@@ -6,7 +6,7 @@
   <link href="https://pudongping.github.io/atom.xml" rel="self"/>
   
   <link href="https://pudongping.github.io/"/>
-  <updated>2024-11-23T04:20:10.691Z</updated>
+  <updated>2024-11-24T14:28:23.604Z</updated>
   <id>https://pudongping.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Go语言中json序列化的一个小坑，建议多留意一下</title>
+    <link href="https://pudongping.github.io/posts/5fc86d1c.html"/>
+    <id>https://pudongping.github.io/posts/5fc86d1c.html</id>
+    <published>2024-11-24T14:27:52.000Z</published>
+    <updated>2024-11-24T14:28:23.604Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在 Go 语言开发中，JSON（JavaScript Object Notation）因其简洁和广泛的兼容性，通常被用作数据交换的主要序列化格式。然而，当你深入使用 JSON 时，&lt;strong&gt;可能会发现它并不总是最佳选择&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;本文将探讨</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何在 Go 项目中隐藏敏感信息，比如避免暴露用户密码？</title>
     <link href="https://pudongping.github.io/posts/9d35cfe9.html"/>
     <id>https://pudongping.github.io/posts/9d35cfe9.html</id>
     <published>2024-11-23T04:19:35.000Z</published>
-    <updated>2024-11-23T04:20:10.691Z</updated>
+    <updated>2024-11-23T04:20:23.655Z</updated>
     
     
       
@@ -577,34 +605,6 @@
     <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
     
     <category term="MySQL" scheme="https://pudongping.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手摸手教你，从0到1开发一个Chrome浏览器插件</title>
-    <link href="https://pudongping.github.io/posts/2980e851.html"/>
-    <id>https://pudongping.github.io/posts/2980e851.html</id>
-    <published>2024-08-09T04:13:02.000Z</published>
-    <updated>2024-08-09T04:15:31.195Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;开发 Chrome 浏览器插件（也称为扩展）是一段有趣且有成就感的过程。在本教程中，我将引导你从零开始，逐步创建一个简单的 Chrome 插件。无论你是编程新手还是有一定基础的用户，我们都将以简单易懂的方式介绍整个过程。&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="前端" scheme="https://pudongping.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="前端" scheme="https://pudongping.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-    <category term="Chrome" scheme="https://pudongping.github.io/tags/Chrome/"/>
     
   </entry>
   
