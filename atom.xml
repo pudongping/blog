@@ -6,7 +6,7 @@
   <link href="https://pudongping.github.io/atom.xml" rel="self"/>
   
   <link href="https://pudongping.github.io/"/>
-  <updated>2024-11-24T14:28:23.604Z</updated>
+  <updated>2024-11-30T05:25:31.360Z</updated>
   <id>https://pudongping.github.io/</id>
   
   <author>
@@ -17,11 +17,186 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hyperf-throttle-requests，一个超牛的 PHP 限流神器</title>
+    <link href="https://pudongping.github.io/posts/5ecf8336.html"/>
+    <id>https://pudongping.github.io/posts/5ecf8336.html</id>
+    <published>2024-11-30T05:24:52.000Z</published>
+    <updated>2024-11-30T05:25:31.360Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在分布式系统和微服务架构中，API 的稳定性和可用性至关重要。为了保护后端服务不受恶意攻击和流量高峰的影响，请求频率限制（Rate Limiting）成为了一种常见的策略。&lt;/p&gt;
+&lt;p&gt;Hyperf 框架作为一款高性能的 PHP</summary>
+        
+      
+    
+    
+    
+    <category term="PHP" scheme="https://pudongping.github.io/categories/PHP/"/>
+    
+    
+    <category term="Hyperf" scheme="https://pudongping.github.io/tags/Hyperf/"/>
+    
+    <category term="PHP" scheme="https://pudongping.github.io/tags/PHP/"/>
+    
+    <category term="限流" scheme="https://pudongping.github.io/tags/%E9%99%90%E6%B5%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hyperf-alarm-clock，一个自动计算代码执行时间，超时并发送通知的小工具</title>
+    <link href="https://pudongping.github.io/posts/982b031b.html"/>
+    <id>https://pudongping.github.io/posts/982b031b.html</id>
+    <published>2024-11-29T02:07:09.000Z</published>
+    <updated>2024-11-30T05:24:36.941Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在软件开发中，我们经常需要对代码执行时间进行监控，以确保系统的性能和稳定性。在 PHP 的世界里，Hyperf 框架以其高性能和丰富的组件生态而闻名，而今天我要介绍的是 Hyperf 生态中的一个小巧的插件包 ——</summary>
+        
+      
+    
+    
+    
+    <category term="PHP" scheme="https://pudongping.github.io/categories/PHP/"/>
+    
+    
+    <category term="Hyperf" scheme="https://pudongping.github.io/tags/Hyperf/"/>
+    
+    <category term="PHP" scheme="https://pudongping.github.io/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hyperf-wise-locksmith，一个高效的PHP分布式锁方案</title>
+    <link href="https://pudongping.github.io/posts/a3ff01d2.html"/>
+    <id>https://pudongping.github.io/posts/a3ff01d2.html</id>
+    <published>2024-11-28T02:24:57.000Z</published>
+    <updated>2024-11-30T05:24:36.941Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在分布式系统中，如何确保多台机器之间不会产生竞争条件，是一个常见且重要的问题。&lt;code&gt;hyperf-wise-locksmith&lt;/code&gt; 库作为 &lt;code&gt;Hyperf&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="PHP" scheme="https://pudongping.github.io/categories/PHP/"/>
+    
+    
+    <category term="锁" scheme="https://pudongping.github.io/tags/%E9%94%81/"/>
+    
+    <category term="Hyperf" scheme="https://pudongping.github.io/tags/Hyperf/"/>
+    
+    <category term="PHP" scheme="https://pudongping.github.io/tags/PHP/"/>
+    
+    <category term="分布式锁" scheme="https://pudongping.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHP 互斥锁：如何确保代码的线程安全？</title>
+    <link href="https://pudongping.github.io/posts/f387a51d.html"/>
+    <id>https://pudongping.github.io/posts/f387a51d.html</id>
+    <published>2024-11-27T02:05:29.000Z</published>
+    <updated>2024-11-30T05:24:36.941Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在多线程和高并发的环境下，我们经常会遇到需要确保代码段互斥执行的场景。比如，在电商平台中，当多个用户同时购买同一件商品时，如何确保库存的扣减是线程安全的？&lt;/p&gt;
+&lt;p&gt;今天，我们将一起探讨这个问题，并介绍一个名为 &lt;code&gt;wise-locksmith&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="PHP" scheme="https://pudongping.github.io/categories/PHP/"/>
+    
+    
+    <category term="互斥锁" scheme="https://pudongping.github.io/tags/%E4%BA%92%E6%96%A5%E9%94%81/"/>
+    
+    <category term="锁" scheme="https://pudongping.github.io/tags/%E9%94%81/"/>
+    
+    <category term="PHP" scheme="https://pudongping.github.io/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你可能不知道 xz 也是一种压缩格式，并且还相当惊艳</title>
+    <link href="https://pudongping.github.io/posts/28e0065f.html"/>
+    <id>https://pudongping.github.io/posts/28e0065f.html</id>
+    <published>2024-11-26T02:51:24.000Z</published>
+    <updated>2024-11-30T05:24:36.941Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在现代计算中，数据存储和传输的效率至关重要。为了节省存储空间和提高传输效率，文件压缩已成为一种普遍的需求。&lt;/p&gt;
+&lt;p&gt;Linux 系统中有多种工具和格式可以实现文件压缩，最常见的包括</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://pudongping.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://pudongping.github.io/tags/Linux/"/>
+    
+    <category term="XZ" scheme="https://pudongping.github.io/tags/XZ/"/>
+    
+    <category term="解压缩" scheme="https://pudongping.github.io/tags/%E8%A7%A3%E5%8E%8B%E7%BC%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言中的加解密利器：go-crypto库全解析</title>
+    <link href="https://pudongping.github.io/posts/4f904664.html"/>
+    <id>https://pudongping.github.io/posts/4f904664.html</id>
+    <published>2024-11-25T02:31:50.000Z</published>
+    <updated>2024-11-30T05:24:36.940Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在软件开发中，数据安全和隐私保护越来越受到重视。Go 语言以其简洁高效的特性，成为了许多开发者的首选。然而，在实际项目中使用加解密时，还是需要在标准库的基础上做一些封装。&lt;code&gt;go-crypto&lt;/code&gt; 库应运而生，它是一个专为 Golang</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
+    
+    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Go语言中json序列化的一个小坑，建议多留意一下</title>
     <link href="https://pudongping.github.io/posts/5fc86d1c.html"/>
     <id>https://pudongping.github.io/posts/5fc86d1c.html</id>
     <published>2024-11-24T14:27:52.000Z</published>
-    <updated>2024-11-24T14:28:23.604Z</updated>
+    <updated>2024-11-24T14:28:32.626Z</updated>
     
     
       
@@ -183,11 +358,11 @@
     
     <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
     
+    <category term="限流" scheme="https://pudongping.github.io/tags/%E9%99%90%E6%B5%81/"/>
+    
     <category term="漏桶" scheme="https://pudongping.github.io/tags/%E6%BC%8F%E6%A1%B6/"/>
     
     <category term="令牌桶" scheme="https://pudongping.github.io/tags/%E4%BB%A4%E7%89%8C%E6%A1%B6/"/>
-    
-    <category term="限流" scheme="https://pudongping.github.io/tags/%E9%99%90%E6%B5%81/"/>
     
   </entry>
   
@@ -420,191 +595,6 @@
     <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
     
     <category term="Cache" scheme="https://pudongping.github.io/tags/Cache/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言中高效使用Redis的Pipeline</title>
-    <link href="https://pudongping.github.io/posts/9af95445.html"/>
-    <id>https://pudongping.github.io/posts/9af95445.html</id>
-    <published>2024-08-19T07:04:17.000Z</published>
-    <updated>2024-08-19T07:04:59.363Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在构建高性能应用时，Redis 经常成为开发者的首选工具。作为一个内存数据库，Redis 可以处理大量的数据操作，但如果每个命令都单独发送，网络延迟会成为瓶颈，影响性能。&lt;/p&gt;
-&lt;p&gt;这时，Redis 的 &lt;strong&gt;Pipeline&lt;/strong&gt; 和</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言中如何扫描Redis中大量的key</title>
-    <link href="https://pudongping.github.io/posts/9b127c3.html"/>
-    <id>https://pudongping.github.io/posts/9b127c3.html</id>
-    <published>2024-08-16T14:16:56.000Z</published>
-    <updated>2024-08-16T14:17:42.674Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在 Redis 中，当我们需要遍历大量的键时，直接使用 &lt;code&gt;KEYS&lt;/code&gt; 命令会面临性能瓶颈，尤其是在键数量非常多的情况下。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;KEYS&lt;/code&gt; 命令会一次性返回所有匹配的键，这可能导致 Redis</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言中使用sqlx来操作事务</title>
-    <link href="https://pudongping.github.io/posts/1ffc0233.html"/>
-    <id>https://pudongping.github.io/posts/1ffc0233.html</id>
-    <published>2024-08-15T07:10:30.000Z</published>
-    <updated>2024-08-15T07:11:21.968Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在应用程序中，数据库事务的使用至关重要。它可以确保操作的原子性、一致性、隔离性和持久性（ACID）。&lt;code&gt;github.com/jmoiron/sqlx&lt;/code&gt; 包提供了一个便利的方法来简化对数据库的操作。&lt;/p&gt;
-&lt;p&gt;本文将介绍如何使用</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="MySQL" scheme="https://pudongping.github.io/tags/MySQL/"/>
-    
-    <category term="sqlx" scheme="https://pudongping.github.io/tags/sqlx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言中使用 sqlx 来操作 MySQL</title>
-    <link href="https://pudongping.github.io/posts/4390abbe.html"/>
-    <id>https://pudongping.github.io/posts/4390abbe.html</id>
-    <published>2024-08-14T06:04:14.000Z</published>
-    <updated>2024-08-14T06:05:13.277Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Go 语言以其高效和简洁的语法逐渐受到开发者的青睐。在实际开发中，数据库操作是不可避免的任务之一。虽然标准库提供了 &lt;code&gt;database/sql&lt;/code&gt; 包来支持数据库操作，但使用起来略显繁琐。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sqlx&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="MySQL" scheme="https://pudongping.github.io/tags/MySQL/"/>
-    
-    <category term="sqlx" scheme="https://pudongping.github.io/tags/sqlx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go 语言中的 MySQL 事务操作</title>
-    <link href="https://pudongping.github.io/posts/50c9af33.html"/>
-    <id>https://pudongping.github.io/posts/50c9af33.html</id>
-    <published>2024-08-13T08:33:53.000Z</published>
-    <updated>2024-08-13T08:34:35.269Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在现代应用程序中，数据的完整性和一致性至关重要。MySQL 的事务功能提供了一种确保操作安全且可靠的机制。&lt;/p&gt;
-&lt;p&gt;在这篇文章中，我将介绍什么是事务，如何在 Go 语言中进行 MySQL 事务操作。&lt;/p&gt;
-&lt;h2 id=&quot;一、什么是事务？&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="MySQL" scheme="https://pudongping.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go语言中进行MySQL预处理和SQL注入防护</title>
-    <link href="https://pudongping.github.io/posts/cd962b5b.html"/>
-    <id>https://pudongping.github.io/posts/cd962b5b.html</id>
-    <published>2024-08-12T14:37:32.000Z</published>
-    <updated>2024-08-12T14:38:15.682Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在现代 web 应用开发中，安全性是我们必须重视的一个方面。SQL 注入是常见的攻击手法之一，它允许攻击者通过构造特殊的 SQL 查询来访问、修改数据库中的数据。&lt;/p&gt;
-&lt;p&gt;在这篇文章中，我们将探讨如何在 Go 语言中进行 MySQL 数据库的预处理操作，以有效防止</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="MySQL" scheme="https://pudongping.github.io/tags/MySQL/"/>
     
   </entry>
   
