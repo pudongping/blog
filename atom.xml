@@ -6,7 +6,7 @@
   <link href="https://pudongping.github.io/atom.xml" rel="self"/>
   
   <link href="https://pudongping.github.io/"/>
-  <updated>2024-11-30T05:25:31.360Z</updated>
+  <updated>2024-12-01T09:24:26.116Z</updated>
   <id>https://pudongping.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>手撸了一个全自动微信清粉小工具（源码详解）</title>
+    <link href="https://pudongping.github.io/posts/59c080d8.html"/>
+    <id>https://pudongping.github.io/posts/59c080d8.html</id>
+    <published>2024-12-01T09:23:36.000Z</published>
+    <updated>2024-12-01T09:24:26.116Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在当今社交软件中，微信是最常用的通讯工具之一。然而，随着时间的推移，我们的好友列表中可能会出现一些不再活跃的账号，也就是我们俗称的“僵尸粉”。&lt;/p&gt;
+&lt;p&gt;这些账号可能是由于长时间不使用、账号被封禁或者故意将我们删除或拉黑。为了保持好友列表的清洁和有效沟通，同时也为了帮助</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://pudongping.github.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://pudongping.github.io/tags/Python/"/>
+    
+    <category term="自动化" scheme="https://pudongping.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+    <category term="微信" scheme="https://pudongping.github.io/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hyperf-throttle-requests，一个超牛的 PHP 限流神器</title>
     <link href="https://pudongping.github.io/posts/5ecf8336.html"/>
     <id>https://pudongping.github.io/posts/5ecf8336.html</id>
     <published>2024-11-30T05:24:52.000Z</published>
-    <updated>2024-11-30T05:25:31.360Z</updated>
+    <updated>2024-11-30T05:25:40.488Z</updated>
     
     
       
@@ -567,34 +597,6 @@
     <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
     
     <category term="队列" scheme="https://pudongping.github.io/tags/%E9%98%9F%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何用Redis高效实现点赞功能？用Set？还是Bitmap？</title>
-    <link href="https://pudongping.github.io/posts/3adceb1d.html"/>
-    <id>https://pudongping.github.io/posts/3adceb1d.html</id>
-    <published>2024-11-12T02:51:06.000Z</published>
-    <updated>2024-11-16T08:35:28.062Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在众多软件应用中，&lt;strong&gt;点赞&lt;/strong&gt;功能几乎成了所有应用中的“标配”。但实现一个高效的点赞功能并不简单，尤其是在面对大规模的用户量和高并发场景时。&lt;/p&gt;
-&lt;p&gt;今天，我们就从实际需求出发，探索如何利用 Redis</summary>
-        
-      
-    
-    
-    
-    <category term="Redis" scheme="https://pudongping.github.io/categories/Redis/"/>
-    
-    
-    <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
-    
-    <category term="Cache" scheme="https://pudongping.github.io/tags/Cache/"/>
     
   </entry>
   
