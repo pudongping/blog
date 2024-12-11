@@ -6,7 +6,7 @@
   <link href="https://pudongping.github.io/atom.xml" rel="self"/>
   
   <link href="https://pudongping.github.io/"/>
-  <updated>2024-12-01T09:24:26.116Z</updated>
+  <updated>2024-12-11T16:02:05.665Z</updated>
   <id>https://pudongping.github.io/</id>
   
   <author>
@@ -17,11 +17,97 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>又双叒叕出来了一款船新Copilot！腾讯终于发大招了！码农们又可以丝滑摸鱼啦～</title>
+    <link href="https://pudongping.github.io/posts/bd2219d.html"/>
+    <id>https://pudongping.github.io/posts/bd2219d.html</id>
+    <published>2024-12-11T16:00:58.000Z</published>
+    <updated>2024-12-11T16:02:05.665Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这几天在腾讯云开发者社区写文章时，老是给我下面这个弹窗提示，要我去体验一下这款 &lt;strong&gt;AI 代码助手&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/medias/loading.gif&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="https://pudongping.github.io/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://pudongping.github.io/tags/AI/"/>
+    
+    <category term="Copilot" scheme="https://pudongping.github.io/tags/Copilot/"/>
+    
+    <category term="编程助手" scheme="https://pudongping.github.io/tags/%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Grequests，非常 Nice 的 Python 异步 HTTP 请求神器</title>
+    <link href="https://pudongping.github.io/posts/22d60526.html"/>
+    <id>https://pudongping.github.io/posts/22d60526.html</id>
+    <published>2024-12-03T03:51:16.000Z</published>
+    <updated>2024-12-11T15:59:05.641Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在 Python 开发中，处理 HTTP 请求是一项基础而重要的任务。我们经常需要从网络获取数据，或者向服务器发送数据。&lt;/p&gt;
+&lt;p&gt;我们已知的 &lt;code&gt;requests&lt;/code&gt; 库已经是相当的牛掰了，但是比较遗憾的是</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://pudongping.github.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://pudongping.github.io/tags/Python/"/>
+    
+    <category term="异步编程" scheme="https://pudongping.github.io/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过标签清理微信好友：Python自动化脚本解析</title>
+    <link href="https://pudongping.github.io/posts/5e38f4b6.html"/>
+    <id>https://pudongping.github.io/posts/5e38f4b6.html</id>
+    <published>2024-12-02T02:08:03.000Z</published>
+    <updated>2024-12-11T15:59:05.641Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;微信已经成为我们日常生活中不可或缺的社交工具。随着使用时间的增长，我们的微信好友列表可能会变得越来越臃肿。&lt;/p&gt;
+&lt;p&gt;在上一篇文章中，我写了一个自动根据用户状态（好友将我们删除了还是拉黑了）将用户打上不同标签的工具。那么，已经将用户打好了标签之后，我们就可以&lt;stron</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://pudongping.github.io/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://pudongping.github.io/tags/Python/"/>
+    
+    <category term="自动化" scheme="https://pudongping.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>手撸了一个全自动微信清粉小工具（源码详解）</title>
     <link href="https://pudongping.github.io/posts/59c080d8.html"/>
     <id>https://pudongping.github.io/posts/59c080d8.html</id>
     <published>2024-12-01T09:23:36.000Z</published>
-    <updated>2024-12-01T09:24:26.116Z</updated>
+    <updated>2024-12-01T09:24:33.639Z</updated>
     
     
       
@@ -509,94 +595,6 @@
     <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
     
     <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go Web服务中如何优雅关机？</title>
-    <link href="https://pudongping.github.io/posts/2e2c4d21.html"/>
-    <id>https://pudongping.github.io/posts/2e2c4d21.html</id>
-    <published>2024-11-14T03:54:11.000Z</published>
-    <updated>2024-11-16T08:35:28.061Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在构建 Web 服务时，我们往往会遇到一个棘手的问题：&lt;strong&gt;当我们想要停止服务时，如何确保正在处理的请求能够顺利完成，而不是突然中断？&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用 Zap 轻松搞定 Go 语言中的结构化日志</title>
-    <link href="https://pudongping.github.io/posts/b16382e2.html"/>
-    <id>https://pudongping.github.io/posts/b16382e2.html</id>
-    <published>2024-11-13T09:29:13.000Z</published>
-    <updated>2024-11-16T08:35:28.062Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在开发现代应用程序时，日志记录是一个不可或缺的部分。它不仅能帮助我们跟踪程序的运行状态，还能在出现问题时提供宝贵的调试信息。&lt;/p&gt;
-&lt;p&gt;在 Go 语言中，有许多日志库可供选择，但在性能和灵活性方面，Zap 是其中的佼佼者。&lt;/p&gt;
-&lt;p&gt;今天，我将带你深入了解如何在</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/tags/Go/"/>
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="Zap" scheme="https://pudongping.github.io/tags/Zap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis 实现高效任务队列：异步队列与延迟队列详解</title>
-    <link href="https://pudongping.github.io/posts/204a3169.html"/>
-    <id>https://pudongping.github.io/posts/204a3169.html</id>
-    <published>2024-11-12T03:58:39.000Z</published>
-    <updated>2024-11-16T08:35:28.062Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在现代开发中，任务队列是一种非常常见的设计模式。它允许我们将需要耗时的操作放到后台执行，从而提高系统的响应速度和并发能力。而在众多的技术选型中，Redis 凭借其高性能和简单易用性，成为了任务队列的理想选择。&lt;/p&gt;
-&lt;p&gt;本文将从零开始，带大家了解如何使用 Redis</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="https://pudongping.github.io/categories/Go/"/>
-    
-    
-    <category term="Golang" scheme="https://pudongping.github.io/tags/Golang/"/>
-    
-    <category term="Redis" scheme="https://pudongping.github.io/tags/Redis/"/>
-    
-    <category term="队列" scheme="https://pudongping.github.io/tags/%E9%98%9F%E5%88%97/"/>
     
   </entry>
   
